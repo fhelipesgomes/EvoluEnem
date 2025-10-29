@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EvoluENEM — foco no que dá ponto</title>
+  <meta name="description" content="Estudo direto ao ponto com TRI, planos personalizados, simulados e correção passo a passo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Top Bar / Nav -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#home" aria-label="EvoluENEM">
+        <img src="assets/logo.svg" alt="EvoluENEM" class="brand__logo" />
+        <span class="brand__name">EvoluENEM</span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <button id="nav-toggle" class="nav__toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+        <ul id="nav-menu" class="nav__list">
+          <li><a href="#como">Como funciona</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#assistente">Assistente IA</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a class="btn btn--primary" href="#comprar">Começar agora</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <span class="kicker">TRI • Matriz ENEM</span>
+        <h1>Destrave seu resultado: <span class="text-gradient">pule o que não cai, acerte o que vale ponto</span>.</h1>
+        <p class="lead">Estudo guiado por dados do ENEM 2025. Você recebe o caminho mais curto: o que estudar, quanto fazer e como revisar.</p>
+
+        <ul class="bullets bullets--green">
+          <li><strong>Estude 10x mais objetivo</strong> com resumos e mapas mentais</li>
+          <li><strong>Resolução passo a passo</strong> — entenda o porquê, não só o gabarito</li>
+          <li><strong>TRI a seu favor</strong> — estratégia de acertos que puxa sua nota</li>
+        </ul>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary btn--lg" id="comprar" href="#">Quero meu plano agora</a>
+          <span class="badge badge--glow">Teste por 7 dias</span>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__value">+10k</div>
+            <div class="stat__label">alunos guiados</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">70%</div>
+            <div class="stat__label">carga em tópicos de alto ganho</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">24/7</div>
+            <div class="stat__label">assistente ativo</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero__mock">
+        <div class="mockcard">
+          <img src="assets/PAINEL.png" alt="Prévia do app EvoluENEM" />
+        </div>
+        <div class="progress">
+          <div class="progress__top">
+            <span>Progresso diário</span><span class="progress__pct" id="progressPct">62%</span>
+          </div>
+          <div class="progress__bar"><span style="width:62%" id="progressBar"></span></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como" class="section section--raised">
+    <div class="container">
+      <h2>Como funciona</h2>
+      <div class="features">
+        <article class="feature feature--green">
+          <div class="feature__icon">📅</div>
+          <h3>Plano que cabe na sua rotina</h3>
+          <p>Informe semanas, nível e horas/dia. Receba uma grade 3–1 (teoria + prática + revisão) focada em <strong>razão, proporção, porcentagem, gráficos</strong> e <strong>geometria básica</strong>.</p>
+          <a class="link-green" href="#assistente" data-cmd="Montar Plano de Estudos">Montar Plano de Estudos →</a>
+        </article>
+        <article class="feature feature--green">
+          <div class="feature__icon">🔮</div>
+          <h3>Previsões que fazem sentido</h3>
+          <p>Tópicos priorizados por frequência, tendência e contexto (finanças, dados, cidadania, ambiente) + 2–3 questões-modelo por item.</p>
+          <a class="link-green" href="#assistente" data-cmd="Quero previsões de questões prováveis">Ver previsões 2025 →</a>
+        </article>
+        <article class="feature feature--green">
+          <div class="feature__icon">⚡</div>
+          <h3>Pratique com propósito</h3>
+          <p>Exercícios A–E no estilo ENEM, três níveis (Fácil, Médio, Difícil) e <strong>gabarito comentado</strong> com TRI estimada.</p>
+          <a class="link-green" href="#assistente" data-cmd="Quero um simulado rápido">Fazer simulado rápido →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANOS (somente Essencial e Premium) -->
+  <section id="planos" class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <h2>Planos</h2>
+        <div class="section__sub">Acesso imediato • Cancelamento simples</div>
+      </div>
+
+      <div class="pricing">
+        <article class="pricecard">
+          <h3>Essencial</h3>
+          <div class="price">
+            <span class="price__value">R$12,90</span> <span class="price__period">/ mês</span>
+          </div>
+          
+<ul class="price__list">
+  <li>Plano de Estudos Personalizado (semanas, foco, nível, horas/dia)</li>
+  <li>Exercícios & Simulados (3–5 questões A–E por tema)</li>
+  <li>Resolver Questão ao Vivo (passo a passo)</li>
+  <li>Resumos Rápidos & Dicas (fórmulas + exemplo + macete)</li>
+</ul>
+
+          <button class="btn btn--ghost" data-plan="Essencial" data-price="12.90">Assinar Essencial</button>
+        </article>
+
+        <article class="pricecard pricecard--focus">
+          <div class="ribbon">Completo</div>
+          <h3>Premium</h3>
+          <div class="price">
+            <span class="price__value">R$49,90</span> <span class="price__period">/ mês</span>
+          </div>
+          
+
+<ul class="price__list">
+  <li>Plano de Estudos Personalizado (semanas, foco, nível e horas/dia, com revisões e simulados semanais)</li>
+  <li>Previsão de Questões Prováveis (Matemática ENEM 2025) com questões‑modelo e checklist de revisão</li>
+  <li>Exercícios e Simulados estilo ENEM (A–E, três níveis) com correção comentada e TRI estimada</li>
+  <li>Resolver Questão ao Vivo: explicação e resolução passo a passo</li>
+  <li>Fórmulas Simplificadas e Mapas Mentais com aplicações e macetes</li>
+  <li>Correção de Redação (C1–C5) com feedback e melhoria‑chave</li>
+  <li>Resumos Rápidos e Dicas por tópico</li>
+</ul>
+
+
+          <button class="btn btn--primary" data-plan="Premium" data-price="49.90">Assinar Premium</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASSISTENTE (ATALHOS) -->
+  <section id="assistente" class="section">
+    <div class="container">
+      <h2>Assistente EvoluENEM</h2>
+      <p class="muted">Atalhos prontos para o chat:</p>
+
+      <div class="quickgrid">
+        <button class="qbtn" data-cmd="Montar Plano de Estudos">
+          <span>🧭</span><strong>Montar Plano</strong>
+          <small>semanas, foco, nível, horas/dia</small>
+        </button>
+        <button class="qbtn" data-cmd="Quero previsões de questões prováveis">
+          <span>🔮</span><strong>Previsões 2025</strong>
+          <small>tópicos com maior chance + modelos</small>
+        </button>
+        <button class="qbtn" data-cmd="Quero exercícios sobre porcentagem">
+          <span>🧮</span><strong>Exercícios</strong>
+          <small>3–5 questões estilo ENEM</small>
+        </button>
+        <button class="qbtn" data-cmd="Quero um simulado rápido">
+          <span>⚡</span><strong>Simulado rápido</strong>
+          <small>5 questões com TRI estimada</small>
+        </button>
+        <button class="qbtn" data-cmd="Resolver ao vivo">
+          <span>🧷</span><strong>Resolver ao vivo</strong>
+          <small>envie a foto/print</small>
+        </button>
+        <button class="qbtn" data-cmd="Gerar fórmulas simplificadas de regra de três">
+          <span>🗺️</span><strong>Fórmulas & Mapas</strong>
+          <small>resumo + exemplo</small>
+        </button>
+        <button class="qbtn" data-cmd="Corrigir Redação">
+          <span>✍️</span><strong>Correção de Redação</strong>
+          <small>notas C1–C5 e intervenção</small>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS + FAQ -->
+  <section class="section">
+    <div class="container two-col">
+      <div class="card">
+        <h2>Resultados na prática</h2>
+        <blockquote class="quote">
+          <p>“Parecia difícil até o EvoluENEM cortar o excesso. Foquei no que cai — e cresci 200+ pontos.”</p>
+          <footer>Larissa, 18</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>“TREINEI com simulados iguais aos da prova e vi onde errava. A correção passo a passo fez toda a diferença.”</p>
+          <footer>Caio, 19</footer>
+        </blockquote>
+      </div>
+
+      <div id="faq" class="card">
+        <h2>Perguntas frequentes</h2>
+        <details class="faq">
+          <summary>O que eu recebo?</summary>
+          <p>Plano personalizado, resumos, exercícios por dificuldade, simulados com comentários, chat ao vivo e suporte à redação.</p>
+        </details>
+        <details class="faq">
+          <summary>Posso cancelar quando quiser?</summary>
+          <p>Sim. O cancelamento é simples pela área do assinante. Você ainda tem 7 dias para testar sem risco.</p>
+        </details>
+        <details class="faq">
+          <summary>Vocês garantem a prova?</summary>
+          <p>Não. Trabalhamos com tendências e dados. As previsões são probabilísticas, mas o estudo fica muito mais eficiente.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> EvoluENEM — Todos os direitos reservados • <a href="#" class="muted">Termos</a> • <a href="#" class="muted">Privacidade</a></p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante (chat) -->
+  <button id="chatFloat" class="chat-float" title="Falar com o EvoluENEM">💬</button>
+  <div id="chatWidget" class="chat-widget" aria-hidden="true">
+    <div class="chat-head">
+      <img src="assets/logo.svg" alt="" />
+      <strong>EvoluENEM</strong>
+      <button id="chatClose" class="chat-close">×</button>
+    </div>
+    <div class="chat-body">
+      <p class="sys">Olá! Sou o EvoluENEM 2025. Diga o que precisa e eu monto um caminho curto até a aprovação.</p>
+      <ul class="quick-inline">
+        <li><button data-cmd="Montar Plano de Estudos">Plano</button></li>
+        <li><button data-cmd="Quero previsões de questões prováveis">Previsões</button></li>
+        <li><button data-cmd="Quero um simulado rápido">Simulado</button></li>
+      </ul>
+    </div>
+    <div class="chat-foot">
+      <input id="chatInput" placeholder="Digite um comando… ex.: Montar Plano de Estudos" />
+      <button id="chatSend" class="btn btn--primary">Enviar</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
