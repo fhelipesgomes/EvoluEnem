@@ -57,3 +57,36 @@ chatSend.addEventListener('click', ()=> {
   if(!txt) return;
   sendCommand(txt);
 });
+/* rolagem suave até a seção de planos ao clicar em "Quero meu plano agora" */
+document.getElementById('comprar')?.addEventListener('click', (e) => {
+  e.preventDefault();
+  const target = document.querySelector('#planos');
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
+// Garantir binding mesmo se houver erros acima no script
+(function attachComprarHandler() {
+  function go() {
+    const target = document.querySelector('#planos');
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Delegação + botão direto
+  document.addEventListener('click', (e) => {
+    const el = e.target.closest('#comprar');
+    if (el) {
+      e.preventDefault();
+      go();
+    }
+  });
+
+  // Se o botão já existir, também liga direto
+  const btn = document.getElementById('comprar');
+  if (btn) {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      go();
+    });
+  }
+})();
